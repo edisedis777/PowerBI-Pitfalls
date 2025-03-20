@@ -1,0 +1,47 @@
+// Basic Measures
+Total Sales = SUM(FactSales[TotalAmount])
+
+Total Sales per Customer = CALCULATE(SUM(FactSales[TotalAmount]))
+
+// Pitfall 2: Poor DAX Usage Examples
+// Wrong Way - Inefficient filtering for Slippers sales
+Sales of Slippers Wrong = CALCULATE(
+    SUM(FactSales[TotalAmount]),
+    FILTER(FactSales, FactSales[PurchaseType] = "Slipper")
+)
+
+// Right Way - Optimized filtering for Slippers sales
+Sales of Slippers = CALCULATE(
+    SUM(FactSales[TotalAmount]),
+    FactSales[PurchaseType] = "Slipper"
+)
+
+// Wrong Way - Incorrect average sales calculation
+Average Transaction Amount = AVERAGE(FactSales[TotalAmount])
+
+// Right Way - Correct average sales per customer
+Average Sales per Customer = AVERAGEX(
+    VALUES(DimCustomer[UniqueID]),
+    [Total Sales per Customer]
+)
+
+// Pitfall 4: Performance Optimization Examples
+// Wrong Way - Unnecessary row-by-row calculation
+Total Sales Slow = SUMX(
+    FactSales,
+    FactSales[Price] * FactSales[Stuckzahl]
+)
+
+// Right Way - Using pre-calculated TotalAmount
+Total Sales Fast = SUM(FactSales[TotalAmount])
+
+// Pitfall 5: Testing Validation Measures
+CustomersWithSales = COUNTROWS(
+    FILTER(FactSales, FactSales[TotalAmount] > 0)
+)
+
+Validated Avg Sales per Customer = DIVIDE(
+    [Total Sales],
+    [CustomersWithSales],
+    0
+)
