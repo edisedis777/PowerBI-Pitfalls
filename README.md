@@ -39,15 +39,15 @@ In the Model view, create a relationship between DimCustomer[UniqueID] and FactS
 - Use the Power BI file you create to compare wrong and right approaches interactively.
 
 ### Detailed Guide: Power BI Pitfalls and Best Practices
-This section expands on the top 5 Power BI pitfalls, using the SalesData.csv dataset to provide practical examples of what to avoid and how to improve your Power BI projects.
+This section expands on the top 5 Power BI pitfalls, using the generated (from the geo profile generator project) SalesData.csv dataset to provide practical examples of what to avoid and how to improve your Power BI projects.
 
 ## Pitfall 1: Inefficient Data Modeling
 
 **Explanation**
-- Loading all data into a single table without proper modeling leads to redundancy, larger file sizes, and slower performance. A star schema with separate dimension and fact tables is more efficient.
+- Loading all data into a single table without proper modeling leads to redundancy, larger file sizes, and slower performance. A simple star schema with separate dimension and fact tables is more efficient!
 
 **Wrong Way**
-- Approach: Import SalesData.csv as a single table without splitting customer and sales data.
+- Approach: Import the generated sample SalesData.csv as a single table without splitting customer and sales data.
 - Issue: Duplicate customer information for each transaction increases file size and slows down queries.
 
 **Right Way**
@@ -88,7 +88,7 @@ See queries/TransformSalesData.m for the Power Query scripts that implement this
 
 ## Pitfall 3: Poor Visualization Choices
 **Explanation**
-- Choosing inappropriate visuals can make reports hard to interpret or misleading.
+- Choosing inappropriate visuals can make reports very hard to interpret or misleading.
 
 ### Example: Visualizing Purchase Types
 **Wrong Way:** Pie chart with all PurchaseType values.
@@ -129,7 +129,7 @@ See queries/TransformSalesData.m for the Power Query scripts that implement this
 
 ## Pitfall 5: Inadequate Testing
 **Explanation**
-- Failing to validate calculations can lead to errors, especially with edge cases or filters.
+- Failing to validate calculations can lead to errors, especially with edge cases or filters!
 
 ### Example: Validating Average Sales
 ** Wrong Way:** Using Total Sales divided by total customers without checking for sales activity.
@@ -156,7 +156,8 @@ Feel free to submit pull requests with additional examples, optimizations, or co
 - Basic understanding of Power Query and DAX.
 
 ### Credits
-Inspired by the article from Koen Verbeeck https://www.mssqltips.com/sqlservertip/8205/power-bi-common-pitfalls/
+- Inspired by the article from Koen Verbeeck https://www.mssqltips.com/sqlservertip/8205/power-bi-common-pitfalls/
+- Random sales data generated with my Geo Profile Generator script https://github.com/edisedis777/geo-profile-generator
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
