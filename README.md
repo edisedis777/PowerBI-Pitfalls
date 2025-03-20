@@ -1,5 +1,5 @@
 # PowerBI-Pitfalls
-Welcome to the PowerBI-Pitfalls project! This repository demonstrates the top 5 Power BI pitfalls, as inspired by common issues in Power BI development (e.g., from articles like MSSQLTips (see Credits)), using a provided sales dataset. For each pitfall, you’ll find examples of what not to do, how to fix it, and code to implement the solutions.
+This repository demonstrates my notes on the top 5 Power BI pitfalls, as inspired by common issues in Power BI development (e.g., from articles like MSSQLTips (see Credits)), using a provided randomly gnerated sales dataset. For each pitfall, you’ll find examples of what not to do, how to fix it, and code to implement the solutions.
 
 ## Project Structure
 - **`/data`**: Contains `SalesData.csv`.
