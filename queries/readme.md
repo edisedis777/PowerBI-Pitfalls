@@ -1,4 +1,4 @@
-This folder contains the DAX queries. 
+This folder contains the PowerBI scripts to transform the raw CSV file into a star schema. 
 
 Usage Instructions:
 
