@@ -2,26 +2,26 @@
 Welcome to the PowerBI-Pitfalls project! This repository demonstrates the top 5 Power BI pitfalls, as inspired by common issues in Power BI development (e.g., from articles like MSSQLTips (see Credits)), using a provided sales dataset. For each pitfall, you’ll find examples of what not to do, how to fix it, and code to implement the solutions.
 
 ## Project Structure
-- **/data:** Contains SalesData.csv.
-- **/queries:** Power Query scripts (TransformSalesData.m).
-- **/dax:** DAX measures (Measures.dax).
-- **/docs:** Detailed guide (PitfallsGuide.md).
+- **`/data`**: Contains `SalesData.csv`.
+- **`/queries`**: Power Query scripts (`TransformSalesData.m`).
+- **`/dax`**: DAX measures (`Measures.dax`).
+- **`/docs`**: Detailed guide (`PitfallsGuide.md`).
   
 ## Setup Instructions
 
 ### Clone the Repository:
-- git clone <repository-url>
+- `git clone <repository-url>`
 
 ### Prepare the Dataset:
-- Place SalesData.csv in the /data folder.
+- Place `SalesData.csv` in the `/data` folder.
 
 ### Open Power BI Desktop:
-- Launch Power BI Desktop (download from Microsoft if needed).
-
+- Launch Power BI Desktop (download from [Microsoft](https://powerbi.microsoft.com/) if needed).
+  
 ### Load and Transform Data:
 - Go to Home > Get Data > Text/CSV and select data/SalesData.csv.
 - Open Power Query Editor.
-- Create two queries (DimCustomer and FactSales) using the code from queries/TransformSalesData.m.
+- Create two queries (`DimCustomer` and `FactSales`) using the code from `queries/TransformSalesData.m`.
 - Click Close & Apply.
 
 ## Set Up the Data Model:
@@ -29,7 +29,7 @@ In the Model view, create a relationship between DimCustomer[UniqueID] and FactS
 
 ### Add DAX Measures:
 - Go to the Modeling tab.
-- Add each measure from dax/Measures.dax.
+- Add each measure from `dax/Measures.dax`.
 
 ### Create Visuals:
 - Follow the examples in the detailed guide below to build visuals demonstrating each pitfall.
