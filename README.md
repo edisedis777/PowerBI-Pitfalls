@@ -1,4 +1,8 @@
 # PowerBI-Pitfalls
+[![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](#)
+[![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)](#)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 This repository demonstrates my notes on the top 5 Power BI pitfalls, as inspired by common issues in Power BI development (e.g., from articles like MSSQLTips (see Credits)), using a provided randomly gnerated sales dataset. For each pitfall, you’ll find examples of what not to do, how to fix it, and code to implement the solutions.
 
 ## Project Structure
